@@ -13,6 +13,9 @@ export const env = createEnv({
         : z.string().optional(),
     AUTH_DISCORD_ID: z.string(),
     AUTH_DISCORD_SECRET: z.string(),
+    AUTH_GITHUB_ID: z.string(),
+    AUTH_GITHUB_SECRET: z.string(),
+
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
@@ -37,6 +40,8 @@ export const env = createEnv({
     AUTH_SECRET: process.env.AUTH_SECRET,
     AUTH_DISCORD_ID: process.env.AUTH_DISCORD_ID,
     AUTH_DISCORD_SECRET: process.env.AUTH_DISCORD_SECRET,
+    AUTH_GITHUB_ID: process.env.AUTH_GITHUB_ID,
+    AUTH_GITHUB_SECRET: process.env.AUTH_GITHUB_SECRET,
     NODE_ENV: process.env.NODE_ENV,
     TURSO_CONNECTION_URL: process.env.TURSO_CONNECTION_URL,
     TURSO_AUTH_TOKEN: process.env.TURSO_AUTH_TOKEN,
